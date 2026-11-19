@@ -1,6 +1,6 @@
 # 工具箱
 
-供个人使用的 macOS 桌面应用。使用 Tauri 2、React、TypeScript 和 CodeMirror 6，当前包含字符工具。
+供个人使用的 macOS 桌面应用。使用 Tauri 2、React、TypeScript 和 CodeMirror 6，包含字符工具和快捷命令。
 
 ## 开发
 
@@ -22,6 +22,10 @@ make dev
 - **长文本转换**：转义输出不带外围双引号的 JSON 字符串内容；展示按完整 JSON 转义规则还原。展示失败保留输入。
 
 所有转换均在本机内存执行。切换 Tab 保留本次内容，退出或重新加载后清空；没有配置文件、数据库或网络服务。
+
+- **快捷命令**：在同一输出标签中顺序执行并保留命令历史；繁忙标签将新命令排入可删除的队列。停止发送 Ctrl+C 对应的进程组中断信号。配置保存到 `~/Library/Application Support/com.rockeydon.toolbox/quick-commands.json`；队列、输出、标签与运行状态仅保存在内存，关闭标签或退出应用即清除。
+- 快捷命令启动系统登录 Shell，以主目录作为初始工作目录，关闭标准输入，不提供交互式 TUI 或密码输入。命令具有本机用户权限；仅保存可信命令。不同标签可并行运行本机命令。
+- 浏览器预览仅用于查看界面，不可加载桌面快捷命令配置或执行本机程序；本机 Shell 检测和命令执行需要 Tauri 桌面应用。
 
 ## 验证
 
@@ -59,7 +63,9 @@ make package
 ## 代码结构
 
 - `src/features/characters/`：字符工具页面、JSON 状态机和独立转换函数。
+- `src/features/quick-commands/`：快捷命令界面、输出与 ANSI 处理及内存会话状态。
+- `src-tauri/src/quick_commands/`：快捷命令配置、Shell 发现和标签隔离的进程队列管理。
 - `src/components/`：CodeMirror 编辑器适配组件。
 - `src-tauri/`：桌面窗口、安全策略、图标和打包配置。
 
-新增工具时增加对应功能目录与左侧菜单入口。当前仅有一个模块，不引入插件框架、后端命令或持久化层。
+新增工具时增加对应功能目录与左侧菜单入口。字符工具仍不接入后端或持久化；快捷命令单独使用 Tauri 命令读写自己的本地 JSON 配置。

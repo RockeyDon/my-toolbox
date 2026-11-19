@@ -14,7 +14,7 @@ body { margin: 0; }
 button { font: inherit; cursor: pointer; }
 button:focus-visible { outline: 3px solid #a4c6ff; outline-offset: 3px; }
 button:disabled { cursor: default; }
-.app-layout { display: flex; height: 100vh; height: 100dvh; min-height: 520px; min-width: 720px; }
+.app-layout { display: flex; height: 100vh; height: 100dvh; min-height: 520px; min-width: 760px; }
 .sidebar { width: 156px; flex-shrink: 0; background: #f0f2f6; border-right: 1px solid #e4e7ed; padding: 20px 10px; }
 .nav-item { border: 0; width: 100%; border-radius: 7px; padding: 11px 12px; display: flex; gap: 10px; align-items: center; text-align: left; }
 .nav-item.selected { color: #3b69bc; background: #e1e9f8; font-weight: 550; }

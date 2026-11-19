@@ -9,6 +9,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   { languageOptions: { globals: { ...globals.browser, ...globals.node } }, rules: { 'max-len': ['error', { code: 180, ignoreUrls: true }] } },
+  { files: ['src/features/quick-commands/output.ts'], rules: { 'no-control-regex': 'off' } },
   {
     files: ['src/**/*.{ts,tsx}'],
     plugins: { 'react-hooks': reactHooks, 'react-refresh': reactRefresh },

@@ -15,12 +15,13 @@
     "icons": "node scripts/generate-icon.mjs"
   },
   "dependencies": {
-    "@lezer/highlight": "^1.2.3",
     "@codemirror/lang-json": "^6.0.2",
     "@codemirror/language": "^6.11.3",
     "@codemirror/lint": "^6.8.5",
     "@codemirror/state": "^6.5.2",
     "@codemirror/view": "^6.38.1",
+    "@lezer/highlight": "^1.2.3",
+    "@tauri-apps/api": "^2.12.5",
     "codemirror": "^6.0.2",
     "json5": "^2.2.3",
     "react": "^19.2.0",
@@ -44,5 +45,10 @@
     "vite": "^7.2.0",
     "vitest": "^3.2.4"
   },
-  "pnpm": { "onlyBuiltDependencies": ["esbuild", "sharp"] }
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
 }
