@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f6f1e9"/><stop offset="1" stop-color="#e4ddd1"/></linearGradient>
+    <linearGradient id="steel" x2="1" y2="1"><stop stop-color="#bac5cf"/><stop offset="1" stop-color="#788995"/></linearGradient>
+    <linearGradient id="body" x2="0" y2="1"><stop stop-color="#384652"/><stop offset="1" stop-color="#23303b"/></linearGradient>
+    <linearGradient id="orange" x2="0" y2="1"><stop stop-color="#ffa64f"/><stop offset="1" stop-color="#e8792f"/></linearGradient>
+    <filter id="shadow" x="-.3" y="-.3" width="1.6" height="1.6">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#17212b" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="928" height="928" rx="208" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path d="M422 485V385a32 32 0 0 1 32-32h116a32 32 0 0 1 32 32v100" fill="none" stroke="url(#orange)" stroke-width="44"/>
+    <path d="m289 215 29 46 40-11 2-54c53 19 73 82 42 127l62 160-53 23-63-160c-55 5-104-46-94-99Z" fill="url(#steel)"/>
+    <g transform="rotate(22 650 450)">
+      <path d="M641 350h18v186h-18Z" fill="url(#steel)"/>
+      <rect x="619" y="218" width="62" height="157" rx="23" fill="url(#orange)"/>
+      <path d="M638 249v76m24-76v76" stroke="#bd5926" stroke-width="7" stroke-linecap="round"/>
+      <rect x="629" y="356" width="42" height="18" rx="6" fill="#3c4b56"/>
+    </g>
+    <path d="M212 506h600v232a54 54 0 0 1-54 54H266a54 54 0 0 1-54-54Z" fill="url(#body)"/>
+    <rect x="192" y="474" width="640" height="78" rx="20" fill="#485965"/>
+    <path d="M216 536h592" stroke="#f29346" stroke-width="12"/>
+    <rect x="286" y="516" width="48" height="83" rx="8" fill="#a6b4be"/>
+    <rect x="690" y="516" width="48" height="83" rx="8" fill="#a6b4be"/>
+    <path d="M310 541v29m404-29v29" stroke="#536672" stroke-width="8" stroke-linecap="round"/>
+    <path d="M310 677h404m-404 35h404" stroke="#53636f" stroke-width="12" stroke-linecap="round" opacity=".65"/>
+  </g>
+</svg>

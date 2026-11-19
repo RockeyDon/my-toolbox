@@ -1,0 +1,24 @@
+.editor-shell { flex: 1; min-height: 80px; position: relative; background: #fff; }
+.editor-mount { position: absolute; inset: 0; }
+.editor-placeholder { position: absolute; top: 20px; left: 66px; right: 12px; color: #a6afbf; font: 12px/1.8 -apple-system, sans-serif; pointer-events: none; }
+.cm-editor { height: 100%; font-size: 13px; background: transparent; }
+.cm-editor.cm-focused { outline: none; }
+.cm-editor .cm-scroller { overflow: auto; font-family: 'SFMono-Regular', Menlo, Consolas, monospace; line-height: 1.8; }
+.cm-editor .cm-content { padding: 16px 0; caret-color: #4479d0; }
+.cm-editor .cm-line { padding: 0 18px 0 13px; }
+.cm-editor .cm-gutters { background: #fcfcfd; border-right: 1px solid #f0f2f6; color: #b5bdcb; min-width: 51px; }
+.cm-editor .cm-lineNumbers .cm-gutterElement { padding: 0 10px 0 6px; }
+.cm-editor .cm-activeLineGutter { background: #f1f4f9; color: #7d91b3; }
+.cm-editor .cm-activeLine { background: #f5f8fd80; }
+.cm-editor.cm-focused .cm-selectionBackground, .cm-editor .cm-selectionBackground { background: #dce8fc; }
+.has-error { box-shadow: inset 0 0 0 1px #e3a7a730; }
+.cm-editor .cm-panels-top { border-bottom: 0; }
+.json-context { background: #f8f9fc; border-bottom: 1px solid #e2e6ee; }
+.json-context[hidden] { display: none; }
+.json-context-row { display: grid; grid-template-columns: var(--context-gutter) minmax(0, 1fr); width: 100%; border: 0; padding: 0; background: transparent;
+  color: inherit; text-align: left; font: 13px/var(--context-line-height) 'SFMono-Regular', Menlo, Consolas, monospace; }
+.json-context-row:hover, .json-context-row:focus-visible { background: #eaf0fb; outline: none; }
+.json-context-row:focus-visible { box-shadow: inset 0 0 0 2px #a4c6ff; }
+.json-context-number { padding-right: var(--context-number-padding); color: #8b96aa; text-align: right; border-right: 1px solid #e9edf3; }
+.json-context-code { overflow: hidden; padding: 0 18px 0 13px; white-space: pre; }
+.json-context-text { display: block; transform: translateX(var(--context-scroll)); }

@@ -1,0 +1,38 @@
+# Dependencies and local caches
+node_modules/
+.pnpm-store/
+.cache/
+.vite/
+.eslintcache
+*.tsbuildinfo
+
+# Build output and generated Tauri schemas
+/dist/
+/src-tauri/target/
+/src-tauri/gen/schemas/
+
+# Intermediate raster image; keep the SVG source and bundled app icons
+/artwork/toolbox.png
+
+# Test output and local Playwright data
+/coverage/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Logs and local environment settings
+*.log
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+
+# macOS and editor temporary files
+.DS_Store
+.idea/
+*.swp
+*.swo
+*~
